@@ -21,8 +21,6 @@ st.markdown("Predict the risk of a patient missing their appointment and suggest
 st.sidebar.header("📋 Patient & Appointment Details")
 
 def user_input_features():
-    patient_id = st.sidebar.number_input('Patient ID', min_value=0)
-    appointment_id = st.sidebar.number_input('Appointment ID', min_value=0)
     age = st.sidebar.slider('Age', 0, 115, 30)
     scholarship = st.sidebar.selectbox('Scholarship', [0, 1])
     hipertension = st.sidebar.selectbox('Hypertension', [0, 1])
