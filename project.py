@@ -31,8 +31,6 @@ def user_input_features():
     lead_time = st.sidebar.slider('Lead Time (days)', 0, 60, 5)
 
     data = {
-        'PatientId': patient_id,
-        'AppointmentID': appointment_id,
         'Age': age,
         'Scholarship': scholarship,
         'Hipertension': hipertension,
@@ -50,7 +48,7 @@ st.subheader("📄 Entered Information")
 st.dataframe(df_input)
 
 if st.button("🔍 Predict No-show Risk"):
-    input_data = df_input[['PatientId', 'AppointmentID', 'Age', 'Scholarship', 'Hipertension',
+    input_data = df_input[[ 'Age', 'Scholarship', 'Hipertension',
                            'Diabetes', 'Alcoholism', 'Handcap', 'SMS_received', 'LeadTime']]
 
     # Predict
