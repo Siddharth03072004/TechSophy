@@ -321,3 +321,11 @@ for package in packages:
         print(f"{package}=={version}")
     except pkg_resources.DistributionNotFound:
         print(f"{package} is not installed in this environment.")
+
+import pickle
+
+# Assuming 'best_model' is the variable holding your trained model
+filename = 'best_model.pkl'
+pickle.dump(best_model, open(filename, 'wb'))
+
+print(f"Model successfully saved as {filename}")
